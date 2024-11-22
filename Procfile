@@ -1,1 +1,1 @@
-web: cd server && yarn install && npm run build && node dist/index.js
+web: cd server && yarn install && yarn run build && node dist/index.js
