@@ -12,8 +12,9 @@ app.get("/api", (req, res) => {
   res.send("Hello from server!");
 });
 
-// Favicon route, if you're using one
-//app.get("/favicon.ico", (req, res) => res.status(204));
+app.get("/favicon.ico", (req, res) => {
+  res.status(204); // No Content
+});
 
 // Handle all other routes by sending the React app's index.html
 app.get("*", (req, res) => {
