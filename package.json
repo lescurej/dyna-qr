@@ -1,0 +1,11 @@
+{
+  "name": "react-typescript-node",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run build --prefix server && npm run build --prefix client && node server/dist/index.js",
+    "heroku-postbuild": "npm run build --prefix client && npm run build --prefix server"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
