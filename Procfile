@@ -1,1 +1,1 @@
-web: npm run build --prefix server && node server/dist/index.js
+web: cd server && yarn install && npm run build && node dist/index.js
