@@ -1,11 +1,16 @@
 {
-  "name": "react-typescript-node",
+  "name": "dyna-qr",
   "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "npm run build --prefix server && npm run build --prefix client && node server/dist/index.js",
-    "heroku-postbuild": "npm run build --prefix client && npm run build --prefix server"
+    "start": "concurrently \"yarn run server\" \"yarn run client\"",
+    "server": "cd server && yarn run start",
+    "client": "cd client && yarn run build && yarn run start"
   },
-  "engines": {
-    "node": "16.x"
+  "repository": "https://github.com/lescurej/dyna-qr.git",
+  "author": "Johan Lescure <johan.lescure@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
   }
 }
