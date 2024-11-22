@@ -6,7 +6,8 @@
   "scripts": {
     "start": "concurrently \"yarn run server\" \"yarn run client\"",
     "server": "cd server && yarn run start",
-    "client": "cd client && yarn run build && yarn run start"
+    "client": "cd client && yarn run build && yarn run start",
+    "heroku-postbuild": "yarn workspace client build && yarn workspace server build"
   },
   "repository": "https://github.com/lescurej/dyna-qr.git",
   "author": "Johan Lescure <johan.lescure@gmail.com>",
